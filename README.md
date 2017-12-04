@@ -1,0 +1,2 @@
+# ViewVisibleLevel
+用来计算View可见程度，还提供了OnScrollListener，可用于列表自动播放
