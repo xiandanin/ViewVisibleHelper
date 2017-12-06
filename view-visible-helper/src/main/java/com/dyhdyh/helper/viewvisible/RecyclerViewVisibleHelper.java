@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * @author dengyuhan
- * @created 2017/12/4 18:00
+ * created 2017/12/4 18:00
  */
 public class RecyclerViewVisibleHelper {
     private int mFirstVisibleItem;

@@ -5,7 +5,7 @@ import android.view.View;
 
 /**
  * @author dengyuhan
- * @created 2017/12/5 14:24
+ * created 2017/12/5 14:24
  */
 public class ViewVisibleInfo {
     private View itemView;

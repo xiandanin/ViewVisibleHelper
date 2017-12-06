@@ -15,7 +15,7 @@ ext {
             [
                     //项目名称
                     name       : "ViewVisibleHelper",
-                    groupId    : "com.dyhdyh.helper.viewvisible",
+                    groupId    : "com.dyhdyh.helper",
                     //项目地址
                     siteUrl    : "https://github.com/dengyuhan/ViewVisibleHelper",
                     //项目git地址

@@ -4,7 +4,7 @@ import android.support.v7.widget.RecyclerView;
 
 /**
  * @author dengyuhan
- * @created 2017/12/5 15:36
+ * created 2017/12/5 15:36
  */
 public abstract class AbstractViewVisibleScrollListener extends RecyclerView.OnScrollListener {
     protected RecyclerViewVisibleHelper mHelper;

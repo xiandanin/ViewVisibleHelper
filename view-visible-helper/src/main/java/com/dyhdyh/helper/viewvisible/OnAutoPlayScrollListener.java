@@ -9,7 +9,7 @@ import java.util.List;
  * 自动播放
  *
  * @author dengyuhan
- * @created 2017/12/4 18:01
+ * created 2017/12/4 18:01
  */
 public class OnAutoPlayScrollListener extends AbstractViewVisibleScrollListener {
 
