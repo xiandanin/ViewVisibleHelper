@@ -4,7 +4,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -26,9 +29,13 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleH
 
     @Override
     public void onBindViewHolder(ExampleHolder holder, int position) {
+        holder.placeholder.setVisibility(position == 0 ? View.VISIBLE : View.GONE);
+
         ExampleData data = this.data.get(position);
         holder.tv.setText(position + " - " + data.getTitle());
-        holder.player.getLayoutParams().height = data.getDisplayHeight();
+        holder.tv_name.setText(data.getNickname());
+        Glide.with(holder.itemView.getContext()).load(data.getImage()).into(holder.ivAvatar);
+        //holder.player.getLayoutParams().height = data.getDisplayHeight();
 
         holder.player.setUp(data.getFileUrl(), true, "测试视频");
 
@@ -42,12 +49,18 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleH
 
     static class ExampleHolder extends RecyclerView.ViewHolder {
         TextView tv;
+        TextView tv_name;
+        ImageView ivAvatar;
         SampleCoverVideo player;
+        View placeholder;
 
         public ExampleHolder(View itemView) {
             super(itemView);
             tv = itemView.findViewById(R.id.tv);
             player = itemView.findViewById(R.id.video);
+            ivAvatar = itemView.findViewById(R.id.iv_avatar);
+            tv_name = itemView.findViewById(R.id.tv_name);
+            placeholder = itemView.findViewById(R.id.placeholder);
         }
     }
 }

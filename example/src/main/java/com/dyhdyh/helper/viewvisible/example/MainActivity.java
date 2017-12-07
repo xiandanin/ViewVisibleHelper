@@ -24,10 +24,13 @@ public class MainActivity extends AppCompatActivity {
     TextView tv_log;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        setSupportActionBar(findViewById(R.id.toolbar));
 
         rv = findViewById(R.id.rv);
         tv_log = findViewById(R.id.tv_log);
